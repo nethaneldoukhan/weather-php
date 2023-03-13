@@ -41,11 +41,11 @@ function buildHtml(data) {
 
     main.innerHTML = `<div>
         <br>
-        <div style="font-weight: bold"><?php echo 'City: ' . $obj->city->name . ', Country: ' . $obj->city->country; ?></div>
+        <div style="font-weight: bold">City: ${data.city.name}, Country: ${data.city.country}</div>
         <br>
         Temp: ${data.list[0].main.temp}° <br>
-        Humidity: <?php echo $obj->list[0]->main->humidity; ?> <br>
-        Clouds: <?php echo $obj->list[0]->weather[0]->description; ?> <br>
-        Wind speed: <?php echo $obj->list[0]->wind->speed; ?>
+        Humidity: ${data.list[0].main.humidity}<br>
+        Clouds: ${data.list[0].weather[0].description}<br>
+        Wind speed: ${data.list[0].wind.speed}
     </div>`;
 }
